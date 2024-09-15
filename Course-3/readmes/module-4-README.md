@@ -36,3 +36,41 @@ You can merge pull requests by retaining the commits. Below is a list of pull re
 ## Key takeaways
 
 Pull requests are a crucial tool you can use for efficiently capturing, implementing, and receiving approvals for changes. These capabilities are made possible through collaboration. Practicing pull requests can help you hone your skills and contribute to a project.
+
+## Fix UP example:
+```
+# Assume you've pushed a commit with a syntax error to the remote
+
+# First, fix the syntax error locally
+# Edit the file(s) to correct the error
+
+# Stage the changes
+git add .
+
+# Create a fixup commit
+git commit --fixup HEAD
+
+# Your log might now look like this:
+# abc1234 fixup! Add feature with syntax error
+# def5678 Add feature with syntax error
+
+# Before we can push this fix, we need to rewrite history
+# Use interactive rebase to apply the fixup
+git rebase -i --autosquash HEAD~2
+
+# This will open an editor. The contents should look like:
+# pick def5678 Add feature with syntax error
+# fixup abc1234 fixup! Add feature with syntax error
+# 
+# Save and close the editor to apply the fixup
+
+# Now your local history has been rewritten, with the fix incorporated
+# into the original commit
+
+# Since you've rewritten history that's already on the remote,
+# you'll need to force push. Be careful with this!
+git push --force-with-lease origin your-branch-name
+
+# The remote now has the corrected version of your commit,
+# without any trace of the syntax error or the fixup commit
+```
