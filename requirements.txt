@@ -13,3 +13,4 @@ wikipedia
 trustcall
 langgraph-cli
 streamlit
+boto3
