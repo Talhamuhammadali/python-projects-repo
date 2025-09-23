@@ -1,3 +1,5 @@
-# Google specilization repo
-This repo will contain all the content from the course
+# Python Learnings 
+This repo will contain practice material an projects for python. this icludes:
+1. Google IT specilization Practice material
+2. Practice from books related to python i.e Python Distilled etc
 
