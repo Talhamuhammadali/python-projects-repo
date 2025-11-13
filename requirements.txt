@@ -18,3 +18,5 @@ numpy
 matplotlib
 seaborn
 scikit-learn
+mypy
+nbqa
