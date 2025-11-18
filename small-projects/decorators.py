@@ -1,8 +1,10 @@
 """Experimenting with some decorators"""
 import time
+import warnings
 
 from functools import wraps
 from typing import Callable, Optional
+
 
 
 # Lets create decorators
@@ -27,7 +29,22 @@ def repeat(times):
         return wrapper
     return decorator    
         
-        
+def depricated(reason: Optional[str]):
+    """Mark a function, class or variables as depricated."""
+    def decorator(obj):
+        if isinstance(obj, type) or callable(obj):
+            @wraps(obj)
+            def wrapper(*args, **kwargs):
+                warnings.warn(f"{obj.__name__} is deprecated. {reason}", category=DeprecationWarning, stacklevel=2)
+                return obj(*args, **kwargs)
+            return wrapper
+        else:
+            warnings.warn(f"This object has deprecated. {reason}", category=DeprecationWarning, stacklevel=2)
+            
+            return obj
+    return decorator
+
+
 # Testing decorators
 @timer
 def test_function():
@@ -38,6 +55,12 @@ def test_function():
 def hi(name: str):
     print(f"Hi {name}")
 
+@depricated(reason="testing, deprication")
+def hello():
+    """Testing deprication"""
+    print("Hello")
+
 if __name__ == "__main__":
     test_function()
     hi(name="Talha")
+    hello()
