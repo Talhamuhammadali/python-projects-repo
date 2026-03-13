@@ -1,0 +1,14 @@
+2026-03-13 14:23:01 ERROR [auth-service] Failed login attempt for user=talha ip=192.168.1.50
+2026-03-13 14:23:02 INFO [api-gateway] Request completed status=200 path=/api/users
+2026-03-13 14:23:03 ERROR [payment-service] Transaction timeout order_id=9821 amount=450.00
+2026-03-13 14:23:04 DEBUG [auth-service] Token refresh initiated session=x8k2m
+2026-03-13 14:23:05 WARNING [db-service] Slow query detected duration=3200ms table=events
+2026-03-13 14:23:06 ERROR [auth-service] Invalid token signature user=ahmed ip=10.0.0.12
+2026-03-13 14:23:07 INFO [api-gateway] Request completed status=201 path=/api/orders
+2026-03-13 14:23:08 ERROR [db-service] Connection pool exhausted active=50 max=50
+2026-03-13 14:23:09 INFO [payment-service] Payment processed order_id=9820 status=success
+2026-03-13 14:23:10 ERROR [api-gateway] Upstream unreachable service=inventory timeout=5000ms
+2026-03-13 14:23:11 WARNING [auth-service] Brute force detected ip=192.168.1.50 attempts=15
+2026-03-13 14:23:12 ERROR [db-service] Deadlock detected table=orders txn_id=88412
+2026-03-13 14:23:13 INFO [api-gateway] Health check passed node=worker-3
+2026-03-13 14:23:14 ERROR [payment-service] Gateway declined card_last4=4242 reason=insufficient_funds

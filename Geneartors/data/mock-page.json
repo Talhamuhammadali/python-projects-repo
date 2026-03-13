@@ -1,0 +1,46 @@
+[
+    {
+        "data": [
+            {"id": 1, "repo": "langraph-agent", "stars": 120, "language": "Python", "forks": 34, "open_issues": 5, "owner": "talha"},
+            {"id": 2, "repo": "redis-search-tool", "stars": 85, "language": "Python", "forks": 12, "open_issues": 2, "owner": "talha"},
+            {"id": 3, "repo": "dbt-snowflake-kit", "stars": 210, "language": "SQL", "forks": 55, "open_issues": 8, "owner": "data-team"}
+        ],
+        "next_cursor": "cursor_page2",
+        "has_more": true
+    },
+    {
+        "data": [
+            {"id": 4, "repo": "arq-worker-utils", "stars": 45, "language": "Python", "forks": 6, "open_issues": 1, "owner": "talha"},
+            {"id": 5, "repo": "keda-scaler-config", "stars": 30, "language": "YAML", "forks": 3, "open_issues": 0, "owner": "infra-team"},
+            {"id": 6, "repo": "fastapi-middleware", "stars": 300, "language": "Python", "forks": 78, "open_issues": 12, "owner": "talha"}
+        ],
+        "next_cursor": "cursor_page3",
+        "has_more": true
+    },
+    {
+        "data": [
+            {"id": 7, "repo": "grain-data-loader", "stars": 60, "language": "Python", "forks": 9, "open_issues": 3, "owner": "ml-team"},
+            {"id": 8, "repo": "spark-etl-pipeline", "stars": 175, "language": "Scala", "forks": 42, "open_issues": 7, "owner": "data-team"},
+            {"id": 9, "repo": "react-dashboard-ui", "stars": 410, "language": "TypeScript", "forks": 95, "open_issues": 15, "owner": "frontend-team"}
+        ],
+        "next_cursor": "cursor_page4",
+        "has_more": true
+    },
+    {
+        "data": [
+            {"id": 10, "repo": "terraform-gcp-modules", "stars": 150, "language": "HCL", "forks": 38, "open_issues": 4, "owner": "infra-team"},
+            {"id": 11, "repo": "kafka-connect-sink", "stars": 90, "language": "Java", "forks": 21, "open_issues": 6, "owner": "data-team"},
+            {"id": 12, "repo": "go-grpc-gateway", "stars": 225, "language": "Go", "forks": 50, "open_issues": 9, "owner": "backend-team"}
+        ],
+        "next_cursor": "cursor_page5",
+        "has_more": true
+    },
+    {
+        "data": [
+            {"id": 13, "repo": "mlflow-tracking-server", "stars": 130, "language": "Python", "forks": 28, "open_issues": 3, "owner": "ml-team"},
+            {"id": 14, "repo": "docker-compose-stacks", "stars": 65, "language": "Dockerfile", "forks": 14, "open_issues": 1, "owner": "infra-team"}
+        ],
+        "next_cursor": null,
+        "has_more": false
+    }
+]

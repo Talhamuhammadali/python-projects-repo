@@ -1,0 +1,1 @@
+"""Module for sample data and its loader."""
