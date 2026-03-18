@@ -35,11 +35,11 @@ def depricated(reason: Optional[str]):
         if isinstance(obj, type) or callable(obj):
             @wraps(obj)
             def wrapper(*args, **kwargs):
-                warnings.warn(f"{obj.__name__} is deprecated. {reason}", category=DeprecationWarning, stacklevel=2)
+                warnings.warn(f"{obj.__name__} is deprecated. {reason}", category=DeprecationWarning, stacklevel=1)
                 return obj(*args, **kwargs)
             return wrapper
         else:
-            warnings.warn(f"This object has deprecated. {reason}", category=DeprecationWarning, stacklevel=2)
+            warnings.warn(f"This object has deprecated. {reason}", category=DeprecationWarning, stacklevel=1)
             
             return obj
     return decorator
@@ -55,7 +55,7 @@ def test_function():
 def hi(name: str):
     print(f"Hi {name}")
 
-@depricated(reason="testing, deprication")
+@depricated(reason="No reason just testing, deprication")
 def hello():
     """Testing deprication"""
     print("Hello")
