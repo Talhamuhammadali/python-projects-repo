@@ -18,6 +18,17 @@ def timer(func: Callable):
         return result
     return wrapper
 
+def timer_wraps(func: Callable):
+    """Time the function that has the decorator with functools.wraps."""
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        stop = time.time()
+        print(f"{func.__name__} processing time: {stop - start:.2f}s")
+        return result
+    return wrapper
+
 def repeat(times):
     """Repeat a function"""
     def decorator(func):
