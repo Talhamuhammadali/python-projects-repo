@@ -10,7 +10,7 @@ def deposit():
     global balance
     for _ in range(amount):
         temp_balance = balance
-        time.sleep(0.00001)  # Simulate a delay
+        time.sleep(0.0001)  # Simulate a delay
         balance = temp_balance + 1
 
 
@@ -20,7 +20,7 @@ def withdraw():
     global balance
     for _ in range(amount):
         temp_balance = balance
-        time.sleep(0.00001)  # Simulate a delay
+        time.sleep(0.0001)  # Simulate a delay
         balance = temp_balance - 1
 
 def deposit_with_lock():
@@ -31,7 +31,7 @@ def deposit_with_lock():
         
         with lock:
             temp_balance = balance
-            time.sleep(0.00001)  # Simulate a delay
+            time.sleep(0.0001)  # Simulate a delay
             balance = temp_balance + 1
             
 def withdraw_with_lock():
@@ -41,7 +41,7 @@ def withdraw_with_lock():
     for _ in range(amount):
         with lock:
             temp_balance = balance
-            time.sleep(0.00001)  # Simulate a delay
+            time.sleep(0.0001)  # Simulate a delay
             balance = temp_balance - 1
 
 if __name__ == "__main__":
